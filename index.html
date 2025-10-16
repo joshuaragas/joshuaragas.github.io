@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joshua Ragas | Details</title>
+<style>
+  body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #d0e3f0, #f4f7fa);
+    color: #222;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .card {
+    width: 360px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border-top: 5px solid #2563eb;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease forwards;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .header {
+    background: #2563eb;
+    padding: 20px;
+    text-align: center;
+    color: white;
+  }
+
+  .header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  .photo {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #2563eb;
+    display: block;
+    margin: 25px auto 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  photo.jpg {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.4);
+  }
+
+  .info {
+    padding: 20px 30px 30px;
+    text-align: center;
+  }
+
+  .info h2 {
+    margin-top: 10px;
+    font-size: 22px;
+    color: #1e3a8a;
+  }
+
+  .info p {
+    margin: 8px 0;
+    font-size: 16px;
+    color: #333;
+  }
+
+  .info p strong {
+    color: #2563eb;
+  }
+</style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="header">
+      <h1>Details</h1>
+    </div>
+
+    <!-- Replace "photo.jpg" with your photo filename -->
+    <img src="photo.jpg" alt="Joshua Ragas" class="photo">
+
+    <div class="info">
+      <h2>Joshua Ragas</h2>
+      <p><strong>Age:</strong> 18</p>
+      <p><strong>Address:</strong> Camp 14, Stafe, Libona, Bukidnon</p>
+      <p><strong>Course:</strong> BSIT – 1st Year</p>
+      <p><strong>School:</strong> Northern Bukidnon State College</p>
+      <p><strong>Status:</strong> Single</p>
+      <p><strong>Religion:</strong> Roman Catholic</p>
+    </div>
+  </div>
+
+</body>
+</html>
