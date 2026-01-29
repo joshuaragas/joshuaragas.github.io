@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Top 10 Most Beautiful in the World</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===== COMBINED CSS ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Playfair Display', serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #14001f, #2b0a3d, #14001f);
+      height: 100vh;
+      overflow: hidden;
+      color: #fff;
+    }
+
+    .slider {
+      height: 100vh;
+      width: 100%;
+    }
+
+    .slides {
+      height: 100%;
+      transition: transform 1s ease-in-out;
+    }
+
+    .slide {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: fadeSlide 1.2s ease;
+    }
+
+    .card {
+      background: rgba(255, 182, 193, 0.14);
+      backdrop-filter: blur(25px);
+      border-radius: 30px;
+      padding: 32px;
+      width: 85%;
+      max-width: 420px;
+      text-align: center;
+      animation: float 6s ease-in-out infinite;
+      box-shadow:
+        0 0 35px rgba(255, 105, 180, 0.25),
+        0 0 90px rgba(186, 85, 211, 0.2);
+    }
+
+    .rank {
+      font-size: 3.2rem;
+      color: #ff9acb;
+      margin-bottom: 18px;
+      text-shadow:
+        0 0 12px #ff9acb,
+        0 0 28px #ff69b4;
+    }
+
+    .card img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      border-radius: 20px;
+      margin-bottom: 18px;
+      box-shadow: 0 0 30px rgba(255, 182, 193, 0.45);
+    }
+
+    .card h2 {
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+      opacity: 0.9;
+    }
+
+    .nav {
+      position: fixed;
+      right: 22px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .nav button {
+      background: rgba(255, 182, 193, 0.2);
+      border: 1px solid rgba(255, 182, 193, 0.45);
+      color: #ff9acb;
+      font-size: 20px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      cursor: pointer;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+
+    .nav button:hover {
+      background: rgba(255, 105, 180, 0.45);
+      box-shadow: 0 0 20px rgba(255, 105, 180, 0.6);
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: scale(0.96); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .hearts::before,
+    .hearts::after {
+      content: "❤";
+      position: fixed;
+      font-size: 22px;
+      color: rgba(255, 105, 180, 0.35);
+      animation: hearts 12s linear infinite;
+      pointer-events: none;
+    }
+
+    .hearts::after {
+      left: 70%;
+      animation-delay: 6s;
+    }
+
+    @keyframes hearts {
+      0% { bottom: -10%; left: 30%; opacity: 0; }
+      40% { opacity: 1; }
+      100% { bottom: 110%; left: 40%; opacity: 0; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="slider">
+    <div class="slides" id="slides">
+
+      <!-- TITLE SLIDE -->
+      <section class="slide">
+        <div class="card">
+          <h1 style="
+            font-size: 2.4rem;
+            color: #ff9acb;
+            text-shadow: 0 0 15px #ff69b4;
+            line-height: 1.4;
+          ">
+            Top 10<br>
+            Most Beautiful<br>
+            in the World
+          </h1>
+        </div>
+      </section>
+
+      <!-- PHOTOS -->
+      <section class="slide"><div class="card"><div class="rank">#10</div><img src="images/10.jpg"><h2>Haewon</h2></div></section>
+      <section class="slide"><div class="card"><div class="rank">#9</div><img src="images/9.jpg"><h2>Kathryn</h2></div></section>
+      <section class="slide"><div class="card"><div class="rank">#8</div><img src="images/8.jpg"><h2>Wonyoung</h2></div></section>
+      <section class="slide"><div class="card"><div class="rank">#7</div><img src="images/7.jpg"><h2>Liz</h2></div></section>
+      <section class="slide"><div class="card"><div class="rank">#6</div><img src="images/6.jpg"><h2>Nayeon</h2></div></section>
+      <section class="slide"><div class="card"><div class="rank">#5</div><img src="images/5.jpg"><h2>Jihyo</h2></div></section>
+      <section class="slide"><div class="card"><div class="rank">#4</div><img src="images/4.jpg"><h2>Sulyoon</h2></div></section>
+      <section class="slide"><div class="card"><div class="rank">#3</div><img src="images/3.jpg"><h2>Jiheon</h2></div></section>
+      <section class="slide"><div class="card"><div class="rank">#2</div><img src="images/2.jpg"><h2>Asong Maangas</h2></div></section>
+      <section class="slide"><div class="card"><div class="rank">#1</div><img src="images/1.jpg"><h2>Babaeng Racist</h2></div></section>
+
+    </div>
+  </div>
+
+  <div class="nav">
+    <button onclick="prev()">▲</button>
+    <button onclick="next()">▼</button>
+  </div>
+
+  <div class="hearts"></div>
+
+  <script>
+    /* ===== COMBINED JS ===== */
+    let index = 0;
+    const slides = document.getElementById("slides");
+    const total = document.querySelectorAll(".slide").length;
+
+    function update() {
+      slides.style.transform = `translateY(-${index * 100}vh)`;
+    }
+
+    function next() {
+      if (index < total - 1) {
+        index++;
+        update();
+      }
+    }
+
+    function prev() {
+      if (index > 0) {
+        index--;
+        update();
+      }
+    }
+
+    // Mouse wheel
+    let lock = false;
+    window.addEventListener("wheel", e => {
+      if (lock) return;
+      lock = true;
+
+      e.deltaY > 0 ? next() : prev();
+      setTimeout(() => lock = false, 800);
+    });
+
+    // Touch
+    let startY = 0;
+    window.addEventListener("touchstart", e => startY = e.touches[0].clientY);
+    window.addEventListener("touchend", e => {
+      let endY = e.changedTouches[0].clientY;
+      if (startY - endY > 50) next();
+      if (endY - startY > 50) prev();
+    });
+  </script>
+
+</body>
+</html>
